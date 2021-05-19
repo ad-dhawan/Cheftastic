@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Cheftastic</string>
+    <string name="search">Search</string>
+    <string name="basket">Basket</string>
+    <string name="top_picks">Top Picks</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">View All</string>
+    <string name="cuisines">Cuisines</string>
+    <string name="indian">Indian</string>
+    <string name="american">American</string>
+    <string name="chinese">Chinese</string>
+    <string name="italian">Italian</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="meal_tags">Meal Tags</string>
+    <string name="meal_category">Meal Category</string>
+    <string name="meal_cuisine">Meal Cuisine</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="measurement">Measurement</string>
+    <string name="recipe">Recipe</string>
+    <string name="meal_recipe">Meal Recipe</string>
+    <string name="cheftastic">Cheftastic</string>
+    <string name="meals_by_ingredient">Meals By Ingredient</string>
+    <string name="add">Add</string>
+    <string name="no_ingredients_found">No Ingredients Found</string>
+    <string name="no_items">No Items</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.IngredientFragment">
+
+    <EditText
+        android:id="@+id/etSearchIngredient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Search Here..."
+        android:padding="10dp"
+        android:drawableEnd="@drawable/img_search"
+        android:drawableTint="@color/colorPrimaryDark"/>
+
+    <RelativeLayout
+        android:id="@+id/progressDialogIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="invisible"
+        android:elevation="1dp"
+        android:layout_below="@+id/etSearchIngredient">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSearchIngredient">
+
+        <TextView
+            android:id="@+id/noIngredientsFoundLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_ingredients_found"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_margin="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

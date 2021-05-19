@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.IngredientDetail">
+
+    <RelativeLayout
+        android:id="@+id/progressDialogIngredientDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="invisible"
+        android:elevation="1dp">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/imgIngredient"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/cheftastic_logo"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/textIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgIngredient"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noMealLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Meals with this Ingredient"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textColor="#000" />
+
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtMealsByIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meals_by_ingredient"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewIngredientMeals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:padding="10dp"/>
+
+</LinearLayout>

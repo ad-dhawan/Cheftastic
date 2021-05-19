@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RecipeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgMealImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="0.8"
+            android:src="@drawable/cheftastic_logo"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1.2"
+            android:weightSum="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMealName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/txtMealTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/txtMealCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/txtMealCuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/progressDialogRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:visibility="invisible"
+            android:elevation="1dp">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtIngredientsStatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtIngredientsStatic"
+                android:scrollbars="vertical"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/txtMeasurementStatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measurement"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMeasurement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMeasurementStatic"
+                android:scrollbars="vertical"
+                android:padding="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/txtRecipeStatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipe"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtMealRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

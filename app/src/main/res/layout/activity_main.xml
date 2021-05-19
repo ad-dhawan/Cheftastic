@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    tools:context=".activity.MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <TextView
+            android:id="@+id/txtTopPicksStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_picks"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:id="@+id/progressDialogTopPicksMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:elevation="1dp">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTopPicks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <View
+            style="@style/Divider"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/txtCategoriesStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/categories"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:id="@+id/progressDialogCategoryMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:elevation="1dp">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/txtViewAllCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:textColor="#3C3BE5"
+            android:textSize="15sp"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:drawableEndCompat="@drawable/img_arrow_right"
+            android:drawablePadding="3dp"/>
+
+        <View
+            style="@style/Divider"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/txtCuisinesStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuisines"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layoutIndianCuisine"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/indian"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/text_background"
+                    android:layout_gravity="bottom">
+
+                <TextView
+                    android:id="@+id/txtIndianCuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/indian"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layoutAmericanCuisine"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/american"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/text_background"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/txtAmericanCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/american"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layoutChineseCuisine"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/chinese"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/text_background"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/txtChineseCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinese"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layoutItalianCuisine"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/italian"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/text_background"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/txtItalianCuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/italian"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtViewAllCuisines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:textColor="#3C3BE5"
+            android:textSize="15sp"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:drawableEndCompat="@drawable/img_arrow_right"
+            android:drawablePadding="3dp"/>
+
+        <View
+            style="@style/Divider"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

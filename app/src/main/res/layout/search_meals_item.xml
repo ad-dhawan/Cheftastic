@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="#fff"
+    app:cardElevation="10dp"
+    android:id="@+id/layoutSearchMeal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgSearchMeal"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/cheftastic_logo"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/txtSearchMeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgSearchMeal"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
